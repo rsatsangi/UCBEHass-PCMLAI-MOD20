@@ -187,13 +187,8 @@ Future improvements could include:
 
 ### Outline of project
 
-- Exploratory Data Analysis Notebook
-
-- Data Preprocessing and Feature Engineering Notebook
-
-- Machine Learning Modeling and Evaluation Notebook
-
-  [Click Here](./CapstoneAssignment20.1-InitialReportandEDA.ipynb)
+- [Final Report Notebook](https://github.com/rsatsangi/UCBEHass-PCMLAI-MOD24/blob/main/CapstoneAssignment20.1-InitialReportandEDA.ipynb)
+- [Data folder](https://github.com/rsatsangi/UCBEHass-PCMLAI-MOD24/tree/main/data)
 
 ---
 
