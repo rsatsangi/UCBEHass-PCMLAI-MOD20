@@ -1,11 +1,11 @@
-# UC Berkeley Professional Certificate in Machine Learning & AI
-## Module 20 – Credit Card Fraud Detection
+## UC Berkeley Professional Certificate in Machine Learning & AI
+### Module 20 – Credit Card Fraud Detection
 
-## Overview
+### Overview
 
 This repository contains my submission for **Module 20** of the **UC Berkeley Professional Certificate in Machine Learning & Artificial Intelligence**.
 
-## Executive summary
+### Executive summary
 
 Financial fraud detection is a critical challenge for banking and payment industries due to the increasing volume of digital transactions. This project focuses on developing machine learning models to identify fraudulent credit card transactions using historical transaction data.
 
@@ -17,7 +17,7 @@ The final solution provides insights into model performance, feature importance,
 
 ---
 
-## Rationale
+### Rationale
 
 Why should anyone care about this question?
 
@@ -35,7 +35,7 @@ This project investigates how machine learning algorithms can be applied to impr
 
 ---
 
-## Research Question
+### Research Question
 
 What machine learning approach can most effectively identify fraudulent credit card transactions while maintaining a balance between detecting fraud cases and minimizing false transaction alerts?
 
@@ -48,7 +48,7 @@ Additional research objectives include:
 
 ---
 
-## Data Sources
+### Data Sources
 
 The project uses a publicly available credit card transaction dataset containing historical transaction records.
 
@@ -72,11 +72,11 @@ Due to the highly imbalanced nature of the dataset, special preprocessing and ev
 
 ---
 
-## Methodology
+### Methodology
 
 The project follows a structured machine learning workflow:
 
-### 1. Data Exploration and Analysis
+#### 1. Data Exploration and Analysis
 
 - Load and inspect transaction data
 - Analyze data distributions
@@ -84,7 +84,7 @@ The project follows a structured machine learning workflow:
 - Perform statistical analysis
 - Visualize transaction patterns
 
-### 2. Data Preparation
+#### 2. Data Preparation
 
 - Handle missing values
 - Analyze feature distributions
@@ -92,7 +92,7 @@ The project follows a structured machine learning workflow:
 - Split data into training and testing datasets
 - Address class imbalance considerations
 
-### 3. Model Development
+#### 3. Model Development
 
 Multiple classification algorithms were developed and compared:
 
@@ -103,7 +103,7 @@ Multiple classification algorithms were developed and compared:
 - LightGBM Classifier
 - CatBoost Classifier
 
-### 4. Model Optimization
+#### 4. Model Optimization
 
 Hyperparameter tuning was performed using:
 
@@ -118,7 +118,7 @@ Optimized models included:
 - Learning rate optimization
 - Number of estimators optimization
 
-### 5. Model Evaluation
+#### 5. Model Evaluation
 
 Models were evaluated using fraud-focused performance metrics:
 
@@ -133,7 +133,7 @@ Models were evaluated using fraud-focused performance metrics:
 
 ---
 
-## Results
+### Results
 
 The analysis demonstrated that ensemble machine learning models significantly improved fraud detection performance compared with baseline approaches.
 
@@ -156,7 +156,7 @@ The final model evaluation highlights the importance of selecting appropriate me
 
 ---
 
-## Next steps
+### Next steps
 
 Future improvements could include:
 
@@ -185,7 +185,7 @@ Future improvements could include:
 
 ---
 
-## Outline of project
+### Outline of project
 
 - Exploratory Data Analysis Notebook
 
@@ -197,7 +197,7 @@ Future improvements could include:
 
 ---
 
-## Author
+### Author
 
 **Rupanshu Satsangi**
 
