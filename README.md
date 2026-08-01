@@ -187,7 +187,7 @@ Future improvements could include:
 
 ### Outline of project
 
-- [Final Report Notebook](https://github.com/rsatsangi/UCBEHass-PCMLAI-MOD24/blob/main/CapstoneAssignment20.1-InitialReportandEDA.ipynb)
+- [Initial Report Notebook](https://github.com/rsatsangi/UCBEHass-PCMLAI-MOD24/blob/main/CapstoneAssignment20.1-InitialReportandEDA.ipynb)
 - [Data folder](https://github.com/rsatsangi/UCBEHass-PCMLAI-MOD24/tree/main/data)
 
 ---
