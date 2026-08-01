@@ -5,97 +5,197 @@
 
 This repository contains my submission for **Module 20** of the **UC Berkeley Professional Certificate in Machine Learning & Artificial Intelligence**.
 
-## Project Overview
+## Executive summary
 
-This project focuses on using advanced machine learning methods to identify fraudulent credit card transactions.
+Financial fraud detection is a critical challenge for banking and payment industries due to the increasing volume of digital transactions. This project focuses on developing machine learning models to identify fraudulent credit card transactions using historical transaction data.
 
-It utilizes the publicly available **Kaggle Credit Card Fraud Detection** dataset, which contains anonymized transaction records for cardholders. The objective is to build predictive models that accurately distinguish between legitimate and fraudulent activities based on patterns in the data.
+The objective of this project is to build, optimize, and evaluate multiple supervised learning classification models capable of accurately distinguishing between legitimate and fraudulent transactions while addressing the challenges of highly imbalanced datasets.
 
-A variety of machine learning techniques—including **Logistic Regression, Decision Tree, Random Forest, AdaBoost, Gradient Boosting, XGBoost, LightGBM, and CatBoost**—are evaluated to classify transactions as either genuine or fraudulent. The purpose of this work is to improve the effectiveness of fraud detection systems while strengthening the security of credit card transaction processes.
+The project explores multiple machine learning algorithms, including Logistic Regression, AdaBoost, Random Forest, XGBoost, LightGBM, and CatBoost. Model performance is evaluated using appropriate fraud detection metrics such as Precision, Recall, F1-score, ROC-AUC, Precision-Recall curves, and confusion matrices.
 
-## Business Problem
+The final solution provides insights into model performance, feature importance, and practical considerations for deploying machine learning-based fraud detection systems.
 
-### Research Question
+---
 
-**How can machine learning models accurately detect fraudulent credit card transactions while minimizing false positives?**
+## Rationale
 
-The goal is to identify patterns that distinguish fraudulent behavior from legitimate transactions in real time.
+Why should anyone care about this question?
 
-## Why This Question is Important
+Credit card fraud results in billions of dollars of financial losses annually and creates significant challenges for financial institutions, merchants, and customers. Traditional rule-based fraud detection systems often struggle to detect sophisticated fraud patterns because fraudulent activities continuously evolve.
 
-Credit card fraud causes significant financial losses and impacts customer trust. Accurate fraud detection systems help financial institutions prevent fraudulent transactions in real time while minimizing inconvenience to legitimate customers.
+Machine learning provides an opportunity to analyze large volumes of transaction data, identify hidden patterns, and improve fraud detection accuracy. A robust fraud detection model can help financial organizations:
 
-## Dataset
+- Reduce financial losses caused by fraudulent transactions
+- Improve customer trust and security
+- Detect suspicious activities faster
+- Reduce false positives and unnecessary transaction declines
+- Automate fraud monitoring processes
 
-Primary Dataset:
-https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+This project investigates how machine learning algorithms can be applied to improve fraud detection effectiveness.
 
-The dataset contains:
-- Anonymized PCA features
+---
+
+## Research Question
+
+What machine learning approach can most effectively identify fraudulent credit card transactions while maintaining a balance between detecting fraud cases and minimizing false transaction alerts?
+
+Additional research objectives include:
+
+- Which classification algorithms provide the best fraud detection performance?
+- Which evaluation metrics are most suitable for highly imbalanced fraud datasets?
+- Which transaction features contribute most significantly to fraud prediction?
+- How does hyperparameter optimization improve model performance?
+
+---
+
+## Data Sources
+
+The project uses a publicly available credit card transaction dataset containing historical transaction records.
+
+Dataset characteristics:
+
+- Source: Public Credit Card Fraud Detection Dataset
+- Number of transactions: 284,807
+- Fraudulent transactions: 492
+- Target variable:
+  - `Class = 0` → Legitimate transaction
+  - `Class = 1` → Fraudulent transaction
+
+The dataset includes:
+
 - Transaction amount
 - Transaction time
-- Fraud/Non-Fraud labels
+- PCA-transformed numerical features (`V1` - `V28`)
+- Fraud classification label (`Class`)
+
+Due to the highly imbalanced nature of the dataset, special preprocessing and evaluation techniques were applied.
+
+---
 
 ## Methodology
 
-- Data preprocessing
-- Exploratory Data Analysis (EDA)
-- Feature engineering
-- Handling class imbalance
-- Model training
-- Hyperparameter optimization
-- Model evaluation
-- Feature importance analysis
+The project follows a structured machine learning workflow:
 
-## Machine Learning Models
+### 1. Data Exploration and Analysis
+
+- Load and inspect transaction data
+- Analyze data distributions
+- Identify class imbalance
+- Perform statistical analysis
+- Visualize transaction patterns
+
+### 2. Data Preparation
+
+- Handle missing values
+- Analyze feature distributions
+- Scale numerical features
+- Split data into training and testing datasets
+- Address class imbalance considerations
+
+### 3. Model Development
+
+Multiple classification algorithms were developed and compared:
 
 - Logistic Regression
-- Decision Tree
-- Random Forest
-- AdaBoost
-- Gradient Boosting
-- XGBoost
-- LightGBM
-- CatBoost
+- AdaBoost Classifier
+- Random Forest Classifier
+- XGBoost Classifier
+- LightGBM Classifier
+- CatBoost Classifier
 
-## Evaluation Metrics
+### 4. Model Optimization
+
+Hyperparameter tuning was performed using:
+
+- Grid Search / Randomized Search
+- Cross-validation
+- Stratified sampling techniques
+
+Optimized models included:
+
+- Regularization tuning
+- Tree depth optimization
+- Learning rate optimization
+- Number of estimators optimization
+
+### 5. Model Evaluation
+
+Models were evaluated using fraud-focused performance metrics:
 
 - Accuracy
 - Precision
 - Recall
-- F1-Score
-- ROC-AUC
+- F1 Score
+- ROC-AUC Score
 - Precision-Recall Curve
 - Confusion Matrix
-- ROC Curve
+- Feature Importance Analysis
 
-Special emphasis is placed on maximizing **Recall** while maintaining high **Precision** to reduce false alarms.
+---
 
-## Expected Results
+## Results
 
-Tree-based and ensemble models are expected to outperform linear models by capturing nonlinear relationships within the transaction data. The objective is to maximize fraud detection while minimizing false positives.
+The analysis demonstrated that ensemble machine learning models significantly improved fraud detection performance compared with baseline approaches.
 
-## Technologies
+Key findings:
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-Learn
+- Tree-based ensemble models performed better than traditional linear models.
+- Optimized boosting algorithms achieved strong fraud detection capability.
+- Recall was prioritized because identifying fraudulent transactions is more important than overall accuracy in highly imbalanced datasets.
+- Feature importance analysis helped identify transaction characteristics contributing most to fraud prediction.
+
+Model comparison showed that optimized ensemble models such as:
+
 - XGBoost
 - LightGBM
 - CatBoost
-- Jupyter Notebook
 
-## Installation
+provided strong predictive performance by effectively capturing complex relationships within transaction data.
 
-```bash
-git clone https://github.com/rsatsangi/UCBEHass-PCMLAI-MOD20.git
-cd UCBEHass-PCMLAI-MOD20
-pip install -r requirements.txt
-jupyter notebook
-```
+The final model evaluation highlights the importance of selecting appropriate metrics beyond accuracy for fraud detection problems.
+
+---
+
+## Next steps
+
+Future improvements could include:
+
+- Implementing advanced imbalance handling techniques:
+  - SMOTE
+  - ADASYN
+  - Cost-sensitive learning
+
+- Testing deep learning approaches:
+  - Neural Networks
+  - Autoencoders
+  - Transformer-based models
+
+- Deploying the selected model as a real-time fraud detection API
+
+- Implementing model monitoring for:
+  - Data drift detection
+  - Fraud pattern changes
+  - Performance degradation
+
+- Adding explainable AI techniques:
+  - SHAP values
+  - LIME explanations
+
+- Integrating streaming transaction processing using cloud platforms.
+
+---
+
+## Outline of project
+
+- Exploratory Data Analysis Notebook
+
+- Data Preprocessing and Feature Engineering Notebook
+
+- Machine Learning Modeling and Evaluation Notebook
+
+  [Click Here](./CapstoneAssignment20.1-InitialReportandEDA.ipynb)
+
+---
 
 ## Author
 
