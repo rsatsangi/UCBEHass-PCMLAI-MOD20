@@ -1,7 +1,5 @@
 ### Credit Card Fraud Detection: Initial Report and Exploratory Data Analysis
 
-**Rupanshu Satsangi**
-
 #### Executive summary
 Financial fraud detection is a critical challenge for banking and payment industries due to the increasing volume of digital transactions. This project develops machine learning models to identify fraudulent credit card transactions using historical transaction data. The objective is to build, optimize, and evaluate multiple supervised learning classification models capable of accurately distinguishing between legitimate and fraudulent transactions while addressing the challenges of a highly imbalanced dataset. Several algorithms are explored — including Logistic Regression, AdaBoost, Random Forest, XGBoost, LightGBM, and CatBoost — with performance assessed using fraud-appropriate metrics such as Precision, Recall, F1-score, ROC-AUC, Precision-Recall curves, and confusion matrices. The final solution provides insights into model performance, feature importance, and practical considerations for deploying machine learning-based fraud detection systems.
 
